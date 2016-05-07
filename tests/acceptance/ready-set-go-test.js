@@ -16,6 +16,7 @@ function setupActivity() {
     this.get('/api/activities.json', function() {
       return [200, { 'Content-Type': 'application/json' }, JSON.stringify(ACTIVITIES)];
     });
+    this.post('/write-coverage', this.passthrough);
   });
 }
 
