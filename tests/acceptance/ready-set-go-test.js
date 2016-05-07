@@ -92,7 +92,7 @@ test('count errors', function(assert) {
       assert.equal(page.errorMarkCount, 1, 'Two errors in the same index.');
       assert.equal(page.errorMarkTitle, 'Attempts: 2', 'Title shows: "Attempts: 2"');
     });
-    
+
     page.typeLetter('c');
     page.typeLetter('d');
 
