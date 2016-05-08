@@ -1,28 +1,28 @@
 .activity-script-viewer {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 20px;
-  min-height: 300px;
   font-size: 32px;
+  margin: 0 auto;
+  max-width: 700px;
+  min-height: 300px;
   outline: 0;
+  padding: 20px;
   white-space: pre-wrap;
+
+  .completed {
+    color: $completed;
+  }
+
+  .pending {
+    span {
+      background-color: $pending-bg;
+      color: $pending-fg;
+    }
+  }
 }
 
-.activity-script-viewer .completed {
-  color: green;
-}
 
-.activity-script-viewer .pending {
-}
-
-.activity-script-viewer .pending span {
-  color: white;
-  background-color: green;
-}
-
-.error-mark{
-  color: #801B00;
-  cursor: help;
+.error-mark {
+  border-bottom: 2px dotted $mark;
   box-sizing: border-box;
-  border-bottom: 2px dotted #801B00;
+  color: $mark;
+  cursor: help;
 }
