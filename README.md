@@ -142,12 +142,12 @@ $ heroku open
 
 Create a `.gitlab-ci` file with the configuration
 
-Add the API key of heroku in gitlab as a env variable
+Add heroku API key as env variable in gitlab
 
 * In heroku go to **[Manager Account](https://dashboard.heroku.com/account) -> API Key**
 * In Gitlab go to **the repository -> project settings -> variables**
 
-Do a change to the repo and push it gitlab
+Do a change to the repo and push it to gitlab to trigger the CI
 
 ```
 $ git add .
