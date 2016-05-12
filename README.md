@@ -1,4 +1,3 @@
-
 # Ember-app-setup-example
 
 ## .editorconfig
@@ -83,7 +82,8 @@ Push your app to heroku
 $ git push heroku master
 ```
 
-See your app in heroku
+Open your app
+
 
 ```
 $ heroku open
@@ -91,14 +91,14 @@ $ heroku open
 
 ## gitlab ci
 
-Create a .gitlab-ci file with the configuration
+Create a `.gitlab-ci` file with the configuration
 
-Add the api key of heroku in gitlab as a env variable
+Add the API key of heroku in gitlab as a env variable
 
 * In heroku go to **[Manager Account](https://dashboard.heroku.com/account) -> API Key**
 * In Gitlab go to **the repository -> project settings -> variables**
 
-Do a change and push your project to gitlab
+Do a change to the repo and push it gitlab
 
 ```
 $ git add .
@@ -109,11 +109,22 @@ $ git push origin master
 ## slack + gitlab
 
 * In slack go to **Apps & Integrations -> Search Incoming WebHooks -> Add Configuration** and create a new webhook
-* In Gitlab go to **the repository -> Settings -> Services -> Slack** and
-  configure the slack service
+* In Gitlab go to **the repository -> Settings -> Services -> Slack** and configure the slack service
 
 ## heroku + gitlab
 
+Install Papertrail heroku addon
+
+```
+$ heroku addons:create papertrail:choklad
+```
+
+Configure an alert in papertrail
+
+* In heroku go to **App Resources -> Papertrail -> Events**
+
+In the search add `Slug compilation failed` and click `Save Search`. Save the
+search and create an Alert.
 
 ## Tajpado
 
