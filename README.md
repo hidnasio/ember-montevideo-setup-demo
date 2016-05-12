@@ -2,12 +2,17 @@
 
 ## .editorconfig
 
-* que es
-* ejemplo de reglas
-* plugins
-* diapo link, sitio, link a reglas, plugins
+Ayuda a definir y mantener estilo de codigo consistente entre los distintos editores.
 
-Allows us to have a shared configuration across IDEs
+En un proyecto puedo definir mas de un editor config siendo el primer editor config aquel que tenga la instruccion root = true. Generalmente ubicado en la raiz del proyecto.
+
+Puedo definir mas de un editor config y se van sobre escribiendo las reglas.
+
+En el editor config raiz puedo definir rutas exctas a archivos o usar los wildcards: ```/templates/components/*.hbs```
+
+> Ember ya trae un editorconfig por defecto.
+
+> La diapositiva pude ser una imagen de 3 editores con distinto tipo de configuracion.
 
 More info in [editorconfig.org](http://editorconfig.org)
 
@@ -17,18 +22,62 @@ More info in [editorconfig.org](http://editorconfig.org)
 
 ## .jshintrc
 
-* que es
-* ejemplo de reglas
-* plugins para editores
-* diapo link, sitio, link a reglas, plugins
+Es una herramienta que nos permite detectar errores y posibles problemas en nuestro codigo javascript mediante un conjunto de reglas configurables.
 
+Definimos un archivo .jshint en la raiz del proyecto y en el definimos todas las reglas comunes para usar en el proyecto.
 
-JSHint allow us to detect errors and potential problems in the code. Ember-cli
-creates a default the file .jshintrc with the basic configuration.
+Con el uso de directivas podemos definir reglas puntuales a nivel de archivo, a nivel de un bloque o a nivel de una linea.
+
+Define para un archivo que compruebe undefined y unused. Tambien definie una variabe global.
+
+```javascript
+  /* jshint undef: true, unused: true */
+  /* globals MY_GLOBAL */
+```
+
+Definir una Blacklist para prevenir el uso de alguna libreria o variable
+
+```javascript
+  /* globals -window */
+
+  window.location.href
+```
+
+Ignorar un bloque de codigo
+
+```javascript
+  // jshint ignore:start
+  let title = window.document.title;
+  if (title === 'Great title') {
+    window.document.title = 'Not allowed code :-(';
+  }
+  // jshint ignore:end
+```
+
+Ignorar una linea de nuestro codigo
+
+```
+let x = lineWithError; // jshint ignore:line
+```
+
+> Ember ya trae un archivo .jshint por defecto.
+
+> camelcase rule is deprecated. Esto es porque jshint se encarga de correccion. Correcciones de estilo de cofigo como estos, son corregidos por JSCS (javascript code style).
+
 
 More info in [jshint.com](http://jshint.com)
 
 * [All Options](http://jshint.com/docs/options/)
+
+## JSCS (JavaScript Code Style)
+
+Es un linter y formater para nuestro codigo JS.
+
+Un buen punto de partida es usar un preset ya armado y crear un archivo .jscsrc anulando o agregando las reglas que quiero personalizar.
+
+> Actualmente usa broccoli-jscs para validar JSCS rules y en un futuro la idea es usar ESLint.
+
+> Ember suave incluye: "validateIndentation": 2 que puede entrar en conflicto con editorconfig, en el caso de un archivo en particular se puede utilizar // jscs: disable validateIndentation
 
 ## ember-suave
 
