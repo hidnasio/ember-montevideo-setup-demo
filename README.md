@@ -1,8 +1,3 @@
-# Tajpado
-
-A simple touch typing learning app written in Ember. Visit http://tajpado.herokuapp.com/ to see it in action.
-
-[github.com/san650/tajpado](https://github.com/san650/tajpado)
 
 # Ember-app-setup-example
 
@@ -104,21 +99,29 @@ Add the api key of heroku in gitlab as a env variable
 * In Gitlab go to **the repository -> project settings -> variables**
 
 Do a change and push your project to gitlab
+
 ```
 $ git add .
 $ git commit -m "test ci build"
 $ git push origin master
 ```
 
-## slack + gitlab (luis)
+## slack + gitlab
+
+* In slack go to **Apps & Integrations -> Search Incoming WebHooks -> Add Configuration** and create a new webhook
+* In Gitlab go to **the repository -> Settings -> Services -> Slack** and
+  configure the slack service
+
+## heroku + gitlab
 
 
+## Tajpado
 
-## heroku + gitlab (luis)
+A simple touch typing learning app written in Ember. Visit http://tajpado.herokuapp.com/ to see it in action.
 
-auto deploy
+[github.com/san650/tajpado](https://github.com/san650/tajpado)
 
-# License
+## License
 
 tajpado is licensed under the MIT license.
 
