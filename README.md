@@ -123,8 +123,7 @@ Configure an alert in papertrail
 
 * In heroku go to **App Resources -> Papertrail -> Events**
 
-In the search add `Slug compilation failed` and click `Save Search`. Save the
-search and create an Alert.
+In the search add `Slug compilation failed` and click `Save Search And Add Alert`. Configure the Alert
 
 ## Tajpado
 
