@@ -17,6 +17,10 @@ indent_size = 2
 indent_style = space
 indent_size = 2
 
+# [app/models/miss.js]
+# indent_style = space
+# indent_size = 8
+
 [*.hbs]
 insert_final_newline = false
 indent_style = space
