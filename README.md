@@ -6,7 +6,7 @@ A simple touch typing learning app written in Ember. Visit http://tajpado.heroku
 
 # Ember-app-setup-example
 
-## .editorconfig (julio)
+## .editorconfig
 
 * que es
 * ejemplo de reglas
@@ -21,7 +21,7 @@ More info in [editorconfig.org](http://editorconfig.org)
 * [Sublime](https://github.com/sindresorhus/editorconfig-sublime#readme)
 * [Atom](https://github.com/sindresorhus/atom-editorconfig#readme)
 
-## .jshintrc (julio)
+## .jshintrc
 
 * que es
 * ejemplo de reglas
@@ -36,7 +36,7 @@ More info in [jshint.com](http://jshint.com)
 
 * [All Options](http://jshint.com/docs/options/)
 
-## ember-suave (julio)
+## ember-suave
 
 * que es
 * preset mas conf customs
@@ -52,20 +52,18 @@ Update module-for-acceptance.js
 options.afterEach.apply(this, arguments);
 ```
 
-## template lint (julio)
+## template lint
 
-* que es
-* preset mas conf customs
 * ejemplo en ember
 
-## scss lint (julio)
+## scss lint
 
 * que es
 * ejemplo en ember
 * [investigar] Como configurar para usar solo css.
 
 
-## y otros (julio)
+## y otros
 
     ember-better-errors 0.0.2 (tener pronto un caso que de errror).
     npm-check
@@ -74,6 +72,28 @@ options.afterEach.apply(this, arguments);
 
     ember-cli-code-coverage
 
+## heroku
+
+Create the app in heroku using a buildpack
+
+```
+$ cd your-app/
+$ heroku login
+$ heroku create ember-montevideo-setup-demo --buildpack https://github.com/tonycoco/heroku-buildpack-ember-cli.git
+```
+
+Push your app to heroku
+
+```
+$ git push heroku master
+```
+
+See your app in heroku
+
+```
+$ heroku open
+```
+
 ## gitlab ci (luis)
 
 .gitlab-ci
@@ -81,14 +101,6 @@ options.afterEach.apply(this, arguments);
 ## slack + gitlab (luis)
 
 
-## heroku (luis)
-
-buildpack
-
-```
-$ heroku create APP_NAME --buildpack https://github.com/tonycoco/heroku-buildpack-ember-cli.git
-$ git push heroku master
-```
 
 ## heroku + gitlab (luis)
 
