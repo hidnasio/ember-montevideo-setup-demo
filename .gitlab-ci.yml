@@ -1,0 +1,25 @@
+image: phusion/passenger-full
+
+stages:
+- test
+- deploy
+
+test:
+  stage: test
+  script:
+    - npm install -g bower
+    - npm install -g ember-cli
+    - npm install -g phantomjs-prebuilt
+    - npm install
+    - bower install --allow-root
+    - ember test
+
+staging:
+ stage: deploy
+ script:
+   - apt-get update -yq
+   - apt-get install -y ruby-dev
+   - gem install dpl
+   - dpl --provider=heroku --strategy=git  --app=ember-montevideo-setup-demo --api-key=$HEROKU_STAGING_API_KEY
+ only:
+   - master

@@ -94,9 +94,21 @@ See your app in heroku
 $ heroku open
 ```
 
-## gitlab ci (luis)
+## gitlab ci
 
-.gitlab-ci
+Create a .gitlab-ci file with the configuration
+
+Add the api key of heroku in gitlab as a env variable
+
+* In heroku go to **[Manager Account](https://dashboard.heroku.com/account) -> API Key**
+* In Gitlab go to **the repository -> project settings -> variables**
+
+Do a change and push your project to gitlab
+```
+$ git add .
+$ git commit -m "test ci build"
+$ git push origin master
+```
 
 ## slack + gitlab (luis)
 
