@@ -1,5 +1,7 @@
 # Ember Montevideo Setup Demo
 
+The talk slides can be found in [https://swipe.to/2495p](https://swipe.to/2495p)
+
 ## .editorconfig
 
 EditorConfig helps developers define and maintain consistent coding styles between different editors.
